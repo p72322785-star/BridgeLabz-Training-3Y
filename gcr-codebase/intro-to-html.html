@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- Declares that this document uses HTML5, allowing the browser to render the page using modern HTML standards. -->
+
+<html lang="en"> <!-- Root element of the HTML document. The 'lang="en"' attribute specifies that the page language is English. -->
+
+<head> <!-- Contains metadata and information about the webpage. This content is not displayed directly on the webpage. -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8, allowing the webpage to display text, symbols, and multiple languages correctly. -->
+
+    <link rel="icon" type="image/png" href="/logo.png?v=1000" />
+    <!-- Specifies the favicon (small icon shown in the browser tab). The version number (?v=1000) helps prevent browser caching. -->
+
+    <link rel="shortcut icon" type="image/png" href="/logo.png?v=1000" />
+    <!-- Provides compatibility with older browsers (especially older Internet Explorer versions) for displaying the favicon. -->
+
+    <link rel="apple-touch-icon" href="/logo.png?v=1000" />
+    <!-- Specifies the icon used when the website is added to the Home Screen on Apple devices (iPhone/iPad). -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive.
+         width=device-width → Sets the page width equal to the device's screen width.
+         initial-scale=1.0 → Displays the page at 100% zoom initially. -->
+
+    <meta name="description"
+          content="BridgeLabz BLuprint.AI - AI-powered Fellowship Mapping & Mandate Intelligence System" />
+    <!-- Provides a brief description of the webpage.
+         Search engines may display this description in search results, improving SEO. -->
+
+    <meta name="keywords"
+          content="BridgeLabz, BLuprint.AI, Fellowship, MIS, Hiring, Mapping" />
+    <!-- Lists keywords related to the webpage.
+         Historically used by search engines for indexing; now mostly included for reference. -->
+
+    <title>BLuprint.AI</title>
+    <!-- Defines the title of the webpage.
+         The title appears on the browser tab, bookmarks, and search engine results. -->
+
+</head>
+
+<body> <!-- Contains all the visible content of the webpage that users can see and interact with. -->
+
+    <div id="root"></div>
+    <!-- Empty container where the React application will be mounted.
+         React renders all components inside this div. -->
+
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Loads the main TypeScript/React entry file.
+         type="module" enables ES Modules, allowing the use of import and export statements.
+         main.tsx initializes the React application and renders it into the div with id="root". -->
+
+</body>
+
+</html>
