@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #1e293b;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            z-index: 10;
+        }
+
+        .layout {
+            display: flex;
+            padding-top: 60px;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            width: 220px;
+            height: calc(100vh - 60px);
+            background-color: #334155;
+            padding: 30px 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 30px;
+            width: calc(100% - 220px);
+        }
+
+        .boxes {
+            display: flex;
+            gap: 25px;
+        }
+
+        .box {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 600px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>My Dashboard</h2>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </aside>
+
+    <main class="content">
+
+        <h1>Dashboard</h1>
+
+        <div class="boxes">
+
+            <div class="box">
+                <h2>Users</h2>
+                <p>150 registered users.</p>
+            </div>
+
+            <div class="box">
+                <h2>Projects</h2>
+                <p>25 active projects.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

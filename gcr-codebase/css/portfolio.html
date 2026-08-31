@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #172554;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2em;
+        }
+
+        main {
+            flex: 1;
+            margin-top: 70px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .intro {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 5%;
+        }
+
+        .text {
+            width: 50%;
+        }
+
+        .text h2 {
+            font-size: 3rem;
+        }
+
+        .text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .profile {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #172554;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text {
+                width: 90%;
+            }
+
+            .profile {
+                width: 40vw;
+                height: 40vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Priya Verma</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="intro">
+        <div class="text">
+            <h2>Welcome to My Portfolio</h2>
+            <p>
+                Hello! I am Priya, a B.Tech CSE student interested in
+                web development, programming and technology.
+            </p>
+        </div>
+
+        <img class="profile"
+             src="https://via.placeholder.com/250"
+             alt="Profile Image">
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Priya Verma</p>
+</footer>
+
+</body>
+</html>

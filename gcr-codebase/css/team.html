@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Members</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            margin: 10px;
+            border: 2px solid #cbd5e1;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .leader {
+            background-color: #dbeafe;
+            border: 3px solid #2563eb;
+        }
+
+        .card h2 {
+            color: #1e293b;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .team {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Our Team</h1>
+
+<div class="team">
+
+    <div class="card leader">
+        <h2>Priya</h2>
+        <h3>Team Lead</h3>
+        <p>
+            Responsible for managing the team and coordinating
+            project activities.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Rahul</h2>
+        <h3>Developer</h3>
+        <p>
+            Works on coding, testing and developing project features.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Ananya</h2>
+        <h3>Designer</h3>
+        <p>
+            Creates user-friendly designs and improves the appearance
+            of the project.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

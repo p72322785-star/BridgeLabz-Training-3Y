@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Newspaper</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #e5e7eb;
+            font-family: Georgia, serif;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            column-span: all;
+        }
+
+        .article {
+            column-count: 3;
+            column-gap: 40px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .article img {
+            width: 200px;
+            margin: 0 15px 10px 0;
+            float: left;
+        }
+
+        .article p {
+            margin-top: 0;
+        }
+
+        @media (max-width: 800px) {
+            .article {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .article {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+
+    <h1>Daily Technology News</h1>
+
+    <div class="article">
+
+        <p>
+            <img src="https://picsum.photos/200/150"
+                 alt="Technology">
+            Technology is changing rapidly and affecting almost every
+            area of modern life. New developments are creating
+            opportunities for students, businesses and communities.
+        </p>
+
+        <p>
+            Artificial intelligence has become one of the most
+            discussed technologies in recent years. It is being used
+            in education, healthcare, business and many other fields.
+        </p>
+
+        <p>
+            Cloud computing has also changed how applications and
+            services are developed. Developers can use cloud platforms
+            to store data and deploy applications.
+        </p>
+
+        <p>
+            Learning technical skills is becoming increasingly useful.
+            Students can learn programming, web development and
+            data structures to prepare for technology careers.
+        </p>
+
+        <p>
+            The future of technology will bring new challenges as well
+            as new possibilities. Responsible development will be
+            important for creating useful and safe systems.
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+</html>
