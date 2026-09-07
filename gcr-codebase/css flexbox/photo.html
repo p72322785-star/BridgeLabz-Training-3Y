@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Figure */
+        figure {
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Images */
+        figure img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+
+            transition: transform 0.5s ease;
+        }
+
+        /* Hover Zoom */
+        figure img:hover {
+            transform: scale(1.08);
+        }
+
+        /* Caption */
+        figcaption {
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Photo Gallery</h1>
+
+    <div class="gallery">
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=1" alt="Nature">
+            <figcaption>Beautiful Nature</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=2" alt="Mountain">
+            <figcaption>Mountain View</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=3" alt="Beach">
+            <figcaption>Sunny Beach</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=4" alt="Forest">
+            <figcaption>Green Forest</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=5" alt="City">
+            <figcaption>City Lights</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=6" alt="Lake">
+            <figcaption>Peaceful Lake</figcaption>
+        </figure>
+
+    </div>
+
+</body>
+</html>
