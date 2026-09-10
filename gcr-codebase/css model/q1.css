@@ -1,0 +1,162 @@
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Flexbox Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    flex: 1 1 240px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Smooth hover transitions */
+    transition: border-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect: Border Color Change */
+.card:hover {
+    border-color: #2563eb !important;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.15);
+}
+
+/* Border Styles */
+.border-solid {
+    border: 4px solid #94a3b8;
+}
+
+.border-dashed {
+    border: 4px dashed #94a3b8;
+}
+
+.border-double {
+    border: 6px double #94a3b8;
+}
+
+.border-groove {
+    border: 6px groove #94a3b8;
+}
+
+/* Border Radius Variations */
+.radius-small {
+    border-radius: 8px;
+}
+
+.radius-medium {
+    border-radius: 16px;
+}
+
+.radius-large {
+    border-radius: 28px;
+}
+
+.radius-custom {
+    border-radius: 30px 8px 30px 8px;
+}
+
+/* Padding Variations */
+.padding-compact {
+    padding: 10px;
+}
+
+.padding-moderate {
+    padding: 24px;
+}
+
+.padding-spacious {
+    padding: 40px;
+}
+
+.padding-asymmetric {
+    padding: 40px 15px 15px 35px;
+}
+
+/* Internal Card Components */
+.card-header {
+    margin-bottom: 1rem;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.card-header .badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.demo-box {
+    background-color: #f1f5f9;
+    border: 1px dashed #cbd5e1;
+    border-radius: 4px;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.specs {
+    font-size: 0.85rem;
+    color: #64748b;
+    background-color: #fafafa;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.specs ul {
+    list-style-type: none;
+}
+
+.specs li {
+    margin-bottom: 0.2rem;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders and Padding Demonstration</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="q1.css">
+</head>
+<body>
+
+    <header>
+        <h1>Borders & Padding Demonstration</h1>
+        <p>This layout uses Flexbox to align cards horizontally. Hover over any box to observe the smooth border color transition.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Box 1: Solid Border -->
+        <article class="card border-solid radius-small padding-compact">
+            <div class="card-header">
+                <span class="badge">Style 1</span>
+                <h2>Solid Border</h2>
+            </div>
+            <div class="demo-box">Content Area</div>
+            <div class="specs">
+                <ul>
+                    <li><strong>Border:</strong> 4px Solid</li>
+                    <li><strong>Radius:</strong> 8px</li>
+                    <li><strong>Padding:</strong> 10px (Compact)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Box 2: Dashed Border -->
+        <article class="card border-dashed radius-medium padding-moderate">
+            <div class="card-header">
+                <span class="badge">Style 2</span>
+                <h2>Dashed Border</h2>
+            </div>
+            <div class="demo-box">Content Area</div>
+            <div class="specs">
+                <ul>
+                    <li><strong>Border:</strong> 4px Dashed</li>
+                    <li><strong>Radius:</strong> 16px</li>
+                    <li><strong>Padding:</strong> 24px (Moderate)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Box 3: Double Border -->
+        <article class="card border-double radius-large padding-spacious">
+            <div class="card-header">
+                <span class="badge">Style 3</span>
+                <h2>Double Border</h2>
+            </div>
+            <div class="demo-box">Content Area</div>
+            <div class="specs">
+                <ul>
+                    <li><strong>Border:</strong> 6px Double</li>
+                    <li><strong>Radius:</strong> 28px</li>
+                    <li><strong>Padding:</strong> 40px (Spacious)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Box 4: Groove Border -->
+        <article class="card border-groove radius-custom padding-asymmetric">
+            <div class="card-header">
+                <span class="badge">Style 4</span>
+                <h2>Groove Border</h2>
+            </div>
+            <div class="demo-box">Content Area</div>
+            <div class="specs">
+                <ul>
+                    <li><strong>Border:</strong> 6px Groove</li>
+                    <li><strong>Radius:</strong> Asymmetric</li>
+                    <li><strong>Padding:</strong> Custom Asymmetric</li>
+                </ul>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* Reset & Base Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navbar Container */
+.navbar-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+}
+
+.brand-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+/* Horizontal Link List (Flexbox) */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+/* Link Styling & Smooth Transitions */
+.nav-link {
+    text-decoration: none;
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.6rem 1.1rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    position: relative;
+    display: inline-block;
+
+    /* Required Transition */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+    color: #2563eb;
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+    transform: translateY(-2px);
+}
+
+/* Active Link Highlight (Distinct background + bottom accent indicator) */
+.nav-link.active {
+    color: #2563eb;
+    background-color: #dbeafe;
+    border-color: #93c5fd;
+    font-weight: 700;
+}
+
+/* Animated underline indicator for the active link */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background-color: #2563eb;
+    border-radius: 2px;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+}
+
+.hero-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    max-width: 650px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.hero-card h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.hero-card p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.resize-hint {
+    font-size: 0.9rem;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center; /* Simple centered text */
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERY (Stack vertically below 700px)
+   ========================================================================== */
+@media (max-width: 700px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack vertically below 700px */
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-link.active::after {
+        display: none; /* Hide horizontal underline bar in stacked vertical mode */
+    }
+}
