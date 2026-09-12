@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini UI Layout</title>
+  <link rel="stylesheet" href="q10.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo">AppSpace</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content Card -->
+  <main class="main-wrapper">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://picsum.photos/id/1025/120/120" alt="User avatar" class="profile-img">
+        <div>
+          <h2>User Profile</h2>
+          <p class="subtitle">Update your account information below.</p>
+        </div>
+      </div>
+
+      <form class="profile-form" onsubmit="event.preventDefault();">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" class="form-input" placeholder="e.g. alex_dev">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-input" placeholder="alex@example.com">
+        </div>
+
+        <div class="card-actions">
+          <button type="submit" class="btn btn-save">Save Changes</button>
+          <button type="button" class="btn btn-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>&copy; 2026 AppSpace. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

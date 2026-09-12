@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transformations Showcase</title>
+    <link rel="stylesheet" href="q6.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>CSS Transformations Showcase</h1>
+        <p>Hover over any card below to trigger its 2D CSS transformation animation.</p>
+    </header>
+
+    <main class="showcase-container">
+
+        <!-- 1. Rotate Transformation -->
+        <div class="card-wrapper">
+            <div class="box box-rotate">
+                <span class="icon">🔄</span>
+                <h3>Rotate</h3>
+            </div>
+            <div class="label">
+                <code>transform: rotate(45deg);</code>
+                <p>Rotates the element 45 degrees clockwise around its center point.</p>
+            </div>
+        </div>
+
+        <!-- 2. Scale Transformation -->
+        <div class="card-wrapper">
+            <div class="box box-scale">
+                <span class="icon">🔍</span>
+                <h3>Scale</h3>
+            </div>
+            <div class="label">
+                <code>transform: scale(1.2);</code>
+                <p>Enlarges the box size uniformly by 20% on hover.</p>
+            </div>
+        </div>
+
+        <!-- 3. Translate Transformation -->
+        <div class="card-wrapper">
+            <div class="box box-translate">
+                <span class="icon">🚀</span>
+                <h3>Translate</h3>
+            </div>
+            <div class="label">
+                <code>transform: translate(0, -15px);</code>
+                <p>Shifts the position 15px upwards along the vertical Y-axis.</p>
+            </div>
+        </div>
+
+        <!-- 4. Skew Transformation -->
+        <div class="card-wrapper">
+            <div class="box box-skew">
+                <span class="icon">📐</span>
+                <h3>Skew</h3>
+            </div>
+            <div class="label">
+                <code>transform: skew(-15deg, 5deg);</code>
+                <p>Distorts the box along the X and Y axes creating a slanted effect.</p>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

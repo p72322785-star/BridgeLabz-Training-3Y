@@ -1,0 +1,145 @@
+/* Reset & Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Dark sleek background */
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-header h1 {
+    font-size: 2.25rem;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+/* Horizontal Flexbox Layout */
+.showcase-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card-wrapper {
+    flex: 1 1 220px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Base Box Styling */
+.box {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+    /* Required Transition */
+    transition: all 0.4s ease;
+}
+
+.box .icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.box h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Individual Color Schemes */
+.box-rotate {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.box-scale {
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.box-translate {
+    background: linear-gradient(135deg, #d97706, #b45309);
+}
+
+.box-skew {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+/* --- HOVER TRANSFORMATIONS --- */
+
+/* 1. Rotate Transformation */
+.box-rotate:hover {
+    transform: rotate(45deg);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+/* 2. Scale Transformation */
+.box-scale:hover {
+    transform: scale(1.2);
+    box-shadow: 0 15px 30px rgba(5, 150, 105, 0.4);
+}
+
+/* 3. Translate Transformation */
+.box-translate:hover {
+    transform: translate(0, -15px);
+    box-shadow: 0 25px 30px rgba(217, 119, 6, 0.4);
+}
+
+/* 4. Skew Transformation */
+.box-skew:hover {
+    transform: skew(-15deg, 5deg);
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.4);
+}
+
+/* Labels under boxes */
+.label {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.label code {
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.label p {
+    font-size: 0.875rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}

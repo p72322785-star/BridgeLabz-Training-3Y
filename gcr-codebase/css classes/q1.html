@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="q1.css">
+</head>
+<body>
+
+  <h1>CSS Pseudo-Classes Demonstration</h1>
+
+  <!-- Flexbox container aligning items in a row -->
+  <div class="container">
+
+    <!-- Section 1: :hover -->
+    <div class="card">
+      <h2>:hover</h2>
+      <p>Applies when the cursor hovers over an element. The link background and text color change when hovered.</p>
+      <div class="demo-area">
+        <a href="#" class="styled-link">Hover Over Me</a>
+      </div>
+    </div>
+
+    <!-- Section 2: :focus -->
+    <div class="card">
+      <h2>:focus</h2>
+      <p>Applies when an element gains focus (via click or tab key). Click the input box to see its border and background glow green.</p>
+      <div class="demo-area">
+        <input type="text" class="styled-input" placeholder="Click or Tab here...">
+      </div>
+    </div>
+
+    <!-- Section 3: :active -->
+    <div class="card">
+      <h2>:active</h2>
+      <p>Applies while an element is actively being pressed down by mouse click. Press and hold the button to see it turn purple.</p>
+      <div class="demo-area">
+        <button class="styled-button">Press Me</button>
+      </div>
+    </div>
+
+    <!-- Section 4: :nth-child() -->
+    <div class="card">
+      <h2>:nth-child()</h2>
+      <p>Selects siblings based on their numerical index position. Odd and even list items display alternating background colors.</p>
+      <div class="demo-area">
+        <ul class="styled-list">
+          <li>Item 1 (Odd)</li>
+          <li>Item 2 (Even)</li>
+          <li>Item 3 (Odd)</li>
+          <li>Item 4 (Even)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

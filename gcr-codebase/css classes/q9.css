@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.page-container {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+/* Flexbox Grid */
+.effects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Base Card Style */
+.interactive-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 28px;
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.interactive-card h3 {
+  color: #f1f5f9;
+}
+
+.interactive-card p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+/* Common Button Base */
+.fx-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effect 1: Scale & Lift */
+.fx-scale {
+  background-color: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.fx-scale:hover {
+  background-color: #0369a1;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(2, 132, 199, 0.4);
+}
+
+.fx-scale:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Effect 2: Color & Rotate */
+.fx-rotate {
+  background-color: #8b5cf6;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fx-rotate .icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.fx-rotate:hover {
+  background-color: #7c3aed;
+  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.35);
+}
+
+.fx-rotate:hover .icon {
+  transform: rotate(144deg) scale(1.2);
+}
+
+/* Effect 3: Glow & Expand */
+.fx-glow {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+}
+
+.fx-glow:hover {
+  background-color: #059669;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-shadow: 0 0 20px 4px rgba(16, 185, 129, 0.4);
+}
+
+/* Focus styles across all buttons */
+.fx-btn:focus-visible {
+  outline: 3px solid #f43f5e;
+  outline-offset: 3px;
+}

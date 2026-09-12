@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height and Width Practice Layout</title>
+    <link rel="stylesheet" href="q2.css">
+</head>
+<body>
+
+    <main class="viewport-wrapper">
+        
+        <!-- Box 1: Fixed px dimensions + min-height demonstration -->
+        <article class="box box-1">
+            <h2>Box 1</h2>
+            <div class="units-badge">px & min-height</div>
+            <ul class="specs-list">
+                <li><strong>Width:</strong> 280px</li>
+                <li><strong>Min-Height:</strong> 250px</li>
+                <li><strong>Behavior:</strong> Fixed width, expands vertically if extra content is added.</li>
+            </ul>
+        </article>
+
+        <!-- Box 2: Relative % & em dimensions + max-width demonstration -->
+        <article class="box box-2">
+            <h2>Box 2</h2>
+            <div class="units-badge">% & em (with max-width)</div>
+            <ul class="specs-list">
+                <li><strong>Width:</strong> 80%</li>
+                <li><strong>Max-Width:</strong> 350px</li>
+                <li><strong>Height:</strong> 18em</li>
+                <li><strong>Behavior:</strong> Responsive width capped at 350px; height scales with font size.</li>
+            </ul>
+        </article>
+
+        <!-- Box 3: Viewport units (vh) + overflow demonstration -->
+        <article class="box box-3">
+            <h2>Box 3</h2>
+            <div class="units-badge">vh & overflow: auto</div>
+            <p class="overflow-text">
+                <strong>Width:</strong> 300px<br>
+                <strong>Height:</strong> 35vh<br>
+                <strong>Overflow:</strong> auto
+            </p>
+            <p class="overflow-text">
+                This box has a fixed viewport height (35vh) and contains extra scrollable text.
+                When content exceeds the box height, a scrollbar appears smoothly thanks to CSS <code>overflow: auto</code>.
+            </p>
+            <p class="overflow-text">
+                Try scrolling inside this box to test the overflow property in action! Additional text ensures the overflow boundary is reached across varying screen sizes.
+            </p>
+        </article>
+
+    </main>
+
+</body>
+</html>

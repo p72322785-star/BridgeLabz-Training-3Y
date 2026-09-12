@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background Webpage</title>
+    <link rel="stylesheet" href="q3.css">
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <div class="logo">Gradient Gallery</div>
+        <nav>
+            <a href="#linear-section">Linear Gradient</a>
+            <a href="#radial-section">Radial Gradient</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="content">
+
+        <!-- Section 1: Linear Gradient with Parallax Effect (background-attachment: fixed) -->
+        <section id="linear-section" class="gradient-section linear-gradient-bg">
+            <div class="card">
+                <h2>Linear Gradient Section</h2>
+                <p>
+                    This section features a multi-stop <strong>linear gradient</strong> background.
+                    Linear gradients transition colors smoothly along a straight line (in this case, diagonally at <code>135deg</code>).
+                </p>
+                <div class="feature-badge">
+                    <code>background-attachment: fixed</code>
+                </div>
+                <p class="parallax-note">
+                    Notice how the background remains fixed in place as you scroll down to the next section, creating a clean parallax depth effect.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Radial Gradient Section -->
+        <section id="radial-section" class="gradient-section radial-gradient-bg">
+            <div class="card">
+                <h2>Radial Gradient Section</h2>
+                <p>
+                    This section features a circular <strong>radial gradient</strong> background.
+                    Radial gradients radiate outward from a central point, transitioning colors seamlessly in concentric rings.
+                </p>
+                <div class="feature-badge">
+                    <code>radial-gradient(circle at center)</code>
+                </div>
+                <p>
+                    The gradient originates at the center of the viewport and spreads outwards towards the outer edges.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Fixed Footer -->
+    <footer class="fixed-footer">
+        <p>&copy; 2026 CSS Styling Practice. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

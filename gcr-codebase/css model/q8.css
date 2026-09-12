@@ -1,0 +1,205 @@
+/* Reset & Base Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #64748b;
+    font-size: 1.05rem;
+}
+
+/* Flexbox Layout: Vertically and Horizontally Centering Demonstration Cards */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   1. VISUAL BOX MODEL CONCENTRIC LAYERS
+   ========================================================================== */
+
+/* MARGIN LAYER (Orange background & outline) */
+.layer-margin {
+    background-color: #ffedd5; /* Warm Orange Light Tint */
+    outline: 2px dashed #f97316;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+/* BORDER LAYER (Yellow/Amber background & solid border) */
+.layer-border {
+    background-color: #fef3c7; /* Amber Tint */
+    border: 6px solid #f59e0b; /* Visible solid border */
+    padding: 25px;
+    border-radius: 8px;
+}
+
+/* PADDING LAYER (Green background & outline) */
+.layer-padding {
+    background-color: #dcfce7; /* Soft Green Tint */
+    outline: 2px dashed #22c55e;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+/* CONTENT LAYER (Blue background & outline) */
+.layer-content {
+    background-color: #dbeafe; /* Soft Blue Tint */
+    outline: 2px dashed #3b82f6;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.margin-label { color: #c2410c; }
+.border-label { color: #b45309; }
+.padding-label { color: #15803d; }
+
+.content-text {
+    font-weight: 800;
+    color: #1d4ed8;
+    font-size: 1.1rem;
+}
+
+.layer-content small {
+    color: #3b82f6;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   2. BOX-SIZING COMPARISON (content-box vs border-box)
+   ========================================================================== */
+
+.comparison-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.box-demo-wrapper {
+    flex: 1 1 260px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-demo-wrapper h3 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 1rem;
+}
+
+/* Common sizing properties for demonstration */
+.box-demo {
+    width: 260px;
+    padding: 20px;
+    border: 8px solid #0284c7;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Default content-box */
+.default-box {
+    box-sizing: content-box;
+}
+
+/* border-box */
+.border-box-demo {
+    box-sizing: border-box;
+}
+
+.box-demo p {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.box-demo strong {
+    font-size: 1.6rem;
+    display: block;
+}
+
+.box-demo small {
+    font-size: 0.75rem;
+    color: #0284c7;
+}
+
+.box-explanation {
+    font-size: 0.875rem;
+    color: #64748b;
+    text-align: center;
+    line-height: 1.5;
+}

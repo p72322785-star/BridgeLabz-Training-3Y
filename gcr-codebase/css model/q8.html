@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration Page</title>
+    <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>CSS Box Model Exploration</h1>
+        <p>Understanding Content, Padding, Border, and Margin Layers</p>
+    </header>
+
+    <main class="page-container">
+
+        <!-- SECTION 1: Visual Layer Representation -->
+        <section class="card section-layers">
+            <h2>1. Concentric Box Model Layers</h2>
+            <p class="description">Each layer is visually differentiated with background colors and dashed outlines.</p>
+            
+            <!-- Concentric Layered Box -->
+            <div class="layer-margin">
+                <span class="layer-label margin-label">MARGIN (Spacing outside the border)</span>
+                <div class="layer-border">
+                    <span class="layer-label border-label">BORDER (Surrounds padding & content)</span>
+                    <div class="layer-padding">
+                        <span class="layer-label padding-label">PADDING (Internal space around content)</span>
+                        <div class="layer-content">
+                            <span class="content-text">CONTENT</span>
+                            <small>(Actual text/media)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: content-box vs border-box Comparison -->
+        <section class="card section-sizing">
+            <h2>2. box-sizing Comparison</h2>
+            <p class="description">Both boxes below have <code>width: 260px</code>, <code>padding: 20px</code>, and <code>border: 8px</code>.</p>
+
+            <div class="comparison-grid">
+                
+                <!-- Default content-box -->
+                <div class="box-demo-wrapper">
+                    <h3>content-box (Default)</h3>
+                    <div class="box-demo default-box">
+                        <p>Total Rendered Width:</p>
+                        <strong>316px</strong>
+                        <small>(260 + 40 + 16)</small>
+                    </div>
+                    <p class="box-explanation">
+                        Width applies <em>only</em> to content. Padding and border are added onto the specified width.
+                    </p>
+                </div>
+
+                <!-- Modern border-box -->
+                <div class="box-demo-wrapper">
+                    <h3>border-box (Recommended)</h3>
+                    <div class="box-demo border-box-demo">
+                        <p>Total Rendered Width:</p>
+                        <strong>260px</strong>
+                        <small>(Padding & border included)</small>
+                    </div>
+                    <p class="box-explanation">
+                        Width includes content, padding, and border. The total width never exceeds 260px.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

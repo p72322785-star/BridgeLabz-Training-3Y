@@ -1,0 +1,249 @@
+/* ==========================================================================
+   RESET & GENERAL STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   1. PSEUDO-ELEMENTS (::before, ::after)
+   ========================================================================== */
+
+/* Header H1 styling using ::before for decorative element */
+.main-header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+/* ::before pseudo-element creates a decorative badge/line above header */
+.main-header h1::before {
+    content: "CSS SELECTORS";
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2563eb;
+    margin-bottom: 0.25rem;
+}
+
+.main-header p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   2. COMBINATORS
+   ========================================================================== */
+
+/* --- Descendant Combinator (space) --- */
+/* Targets ANY <h2> inside a section with class .card regardless of depth */
+.card h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+}
+
+/* --- Child Combinator (>) --- */
+/* Targets ONLY direct child <p> elements immediately under .section-combinators */
+.section-combinators > p.intro-text {
+    font-weight: 600;
+    color: #475569;
+}
+
+/* --- Adjacent Sibling Combinator (+) --- */
+/* Targets the <p> that is directly immediately after .intro-text */
+.intro-text + p.sibling-alert {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 0.5rem 0.75rem;
+    border-left: 4px solid #f59e0b;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+}
+
+/* --- General Sibling Combinator (~) --- */
+/* Targets ALL <p> elements that come after .intro-text in the same parent container */
+.intro-text ~ p.general-sibling {
+    color: #047857;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   3. PSEUDO-CLASSES (:nth-child, :hover, :focus)
+   ========================================================================== */
+
+.demo-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.demo-list li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+}
+
+/* --- Structural Pseudo-Classes (:nth-child) --- */
+/* Alternating striping for odd and even items */
+.demo-list li:nth-child(odd) {
+    background-color: #f1f5f9;
+}
+
+.demo-list li:nth-child(even) {
+    background-color: #e2e8f0;
+}
+
+/* ::before pseudo-element inside list items to add dynamic numbering */
+.demo-list li::before {
+    content: "Item " counter(item-counter) ": ";
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.demo-list {
+    counter-reset: item-counter;
+}
+
+.demo-list li {
+    counter-increment: item-counter;
+}
+
+/* --- Dynamic Pseudo-Class (:hover) --- */
+/* Highlights item when cursor hovers over it */
+.demo-list li:hover {
+    background-color: #dbeafe;
+    transform: translateX(6px);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. ATTRIBUTE SELECTORS
+   ========================================================================== */
+
+.link-group {
+    margin-bottom: 2rem;
+}
+
+.link-group h3, .form-group h3 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 0.75rem;
+}
+
+.link-group ul {
+    list-style: none;
+}
+
+.link-group li {
+    margin-bottom: 0.5rem;
+}
+
+.link-group a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link-group a:hover {
+    text-decoration: underline;
+}
+
+/* --- Attribute Starts-With Selector ([href^="..."]) --- */
+/* Matches links starting with "https" and appends a lock symbol via ::after */
+a[href^="https"] {
+    color: #059669;
+}
+
+a[href^="https"]::after {
+    content: " 🔒";
+    font-size: 0.8rem;
+}
+
+/* --- Attribute Ends-With Selector ([href$="..."]) --- */
+/* Matches links ending with ".pdf" and appends a PDF tag via ::after */
+a[href$=".pdf"]::after {
+    content: " [PDF]";
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #dc2626;
+}
+
+/* --- Exact Attribute Match Selector ([type="text"]) --- */
+/* Styles text input elements specifically */
+input[type="text"] {
+    border: 2px solid #cbd5e1;
+    background-color: #ffffff;
+}
+
+/* --- Attribute Exact Match for Email Inputs ([type="email"]) --- */
+input[type="email"] {
+    border: 2px solid #cbd5e1;
+    background-color: #fafafa;
+}
+
+/* Form layout elements */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.input-wrapper label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.input-wrapper input {
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* --- User Action Pseudo-Class (:focus) --- */
+/* Triggers blue outline glow when form inputs gain focus */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}

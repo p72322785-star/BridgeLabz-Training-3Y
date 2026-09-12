@@ -1,0 +1,90 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Dark sleek background */
+    color: #f8fafc;
+}
+
+/* Flexbox Centering (Vertical & Horizontal across full viewport) */
+.viewport-wrapper {
+    display: flex;
+    justify-content: center; /* Horizontally center flex items */
+    align-items: center;     /* Vertically center flex items */
+    flex-wrap: wrap;         /* Allows wrapping on smaller screens */
+    gap: 2rem;
+    min-height: 100vh;       /* Ensures full vertical viewport coverage */
+    padding: 2rem 1rem;
+}
+
+/* Base Box Styling */
+.box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.units-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.specs-list {
+    list-style-type: none;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.specs-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- BOX 1: Fixed units (px) & min-height --- */
+.box-1 {
+    width: 280px;            /* Fixed width in px */
+    min-height: 250px;       /* Guarantees at least 250px height */
+    background-color: #2563eb; /* Distinct Coral Blue */
+}
+
+/* --- BOX 2: Relative units (%, em) & max-width --- */
+.box-2 {
+    width: 80%;              /* Relative width in % */
+    max-width: 350px;        /* Limits max expansion */
+    height: 18em;            /* Height relative to font-size (em) */
+    background-color: #059669; /* Distinct Emerald Green */
+}
+
+/* --- BOX 3: Viewport units (vh) & overflow property --- */
+.box-3 {
+    width: 300px;
+    height: 35vh;            /* Height relative to 35% of Viewport Height */
+    overflow: auto;          /* Scrollbar appears if text exceeds height */
+    background-color: #7c3aed; /* Distinct Royal Purple */
+}
+
+.overflow-text {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    color: #e2e8f0;
+}

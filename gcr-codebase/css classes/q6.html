@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation Demonstration</title>
+  <link rel="stylesheet" href="q6.css">
+</head>
+<body>
+
+  <main class="page-container">
+    <header class="header">
+      <h1 class="glow-text">CSS Animation Showcase</h1>
+      <p>Demonstrating @keyframes, delays, iteration counts, and directions.</p>
+    </header>
+
+    <!-- Flexbox Grid Container -->
+    <section class="animation-grid">
+
+      <!-- Animation 1: Moving Box -->
+      <div class="card">
+        <h3>1. Moving Box</h3>
+        <p>Uses <code>animation-direction: alternate</code> and <code>infinite</code> loops.</p>
+        <div class="stage">
+          <div class="moving-box"></div>
+        </div>
+      </div>
+
+      <!-- Animation 2: Bouncing Ball -->
+      <div class="card">
+        <h3>2. Bouncing Ball</h3>
+        <p>Uses <code>animation-delay: 0.3s</code> with <code>ease-in-out</code> timing.</p>
+        <div class="stage">
+          <div class="bouncing-ball"></div>
+        </div>
+      </div>
+
+      <!-- Animation 3: Glowing Text -->
+      <div class="card">
+        <h3>3. Color-Changing Text</h3>
+        <p>Cycles text color and scale using keyframe percentages.</p>
+        <div class="stage">
+          <span class="pulse-text">ANIMATE</span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>

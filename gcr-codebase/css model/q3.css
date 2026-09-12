@@ -1,0 +1,134 @@
+/* Reset & General Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    /* Extra vertical padding so top header and bottom footer don't cover section content */
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+/* --- Fixed Header --- */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fixed-header .logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+}
+
+.fixed-header nav a {
+    color: #f8fafc;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.fixed-header nav a:hover {
+    color: #38bdf8;
+}
+
+/* --- Fixed Footer --- */
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Shared Section Styling --- */
+.gradient-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Glassmorphism Card for Text Content */
+.card {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+.feature-badge {
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1.25rem 0;
+}
+
+.parallax-note {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* --- Section 1: Linear Gradient with Parallax Effect --- */
+.linear-gradient-bg {
+    background-image: linear-gradient(135deg, #4f46e5, #06b6d4, #10b981);
+    /* Creates the parallax effect on scroll */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Section 2: Radial Gradient --- */
+.radial-gradient-bg {
+    background-image: radial-gradient(circle at center, #8b5cf6 0%, #3b82f6 50%, #0f172a 100%);
+    background-size: cover;
+    background-position: center;
+}

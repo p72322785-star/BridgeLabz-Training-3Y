@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.wrapper {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+h1 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+code {
+  background: #1e293b;
+  color: #f43f5e;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Flexbox Layout */
+.comparison-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Shared Box Styling */
+.box {
+  width: 300px;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.box h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.box p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.calc {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* 1. Default Box (content-box) */
+.box-content {
+  box-sizing: content-box;
+  background-color: #ef4444;
+  border: 10px solid #991b1b;
+  color: #ffffff;
+}
+
+/* 2. Border Box (border-box) */
+.box-border {
+  box-sizing: border-box;
+  background-color: #10b981;
+  border: 10px solid #065f46;
+  color: #ffffff;
+}
+
+/* Responsive collapse on smaller screens */
+@media (max-width: 700px) {
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

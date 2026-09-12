@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+
+  <main class="wrapper">
+    <h1>Box-Sizing Comparison</h1>
+    <p class="description">
+      Both boxes have CSS <code>width: 300px</code>, <code>padding: 30px</code>, and <code>border: 10px solid</code>.
+    </p>
+
+    <!-- Flexbox Container for Side-by-Side Comparison -->
+    <div class="comparison-container">
+      
+      <!-- Default Box -->
+      <div class="box box-content">
+        <h2>content-box (Default)</h2>
+        <p>Total Width = Width + Padding + Border</p>
+        <p class="calc">300px + 60px + 20px = <strong>380px</strong></p>
+      </div>
+
+      <!-- Border Box -->
+      <div class="box box-border">
+        <h2>border-box</h2>
+        <p>Total Width = Width (Padding & Border included inside)</p>
+        <p class="calc">Rendered Width = <strong>300px</strong></p>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

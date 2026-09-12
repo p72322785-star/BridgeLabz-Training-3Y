@@ -1,0 +1,163 @@
+/* Reset & Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Card Container with Subtle Shadow and Border Radius */
+.form-container {
+    background-color: #ffffff;
+    max-width: 480px;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    /* Subtle depth shadow */
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 
+                0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    border: 1px solid #e2e8f0;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-header h2 {
+    font-size: 1.75rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Uniform Vertical Spacing Between Elements */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Guarantees equal uniform spacing between form controls */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Base Input and Textarea Formatting */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #0f172a;
+    background-color: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px; /* Neat rounded corners */
+    
+    /* Removing default outline to apply custom ones */
+    outline: none;
+    
+    /* Transition for smooth focus state changes */
+    transition: all 0.25s ease-in-out;
+}
+
+.helper-text {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.2rem;
+}
+
+.helper-text code {
+    background-color: #f1f5f9;
+    color: #0284c7;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   OUTLINE & FOCUS STYLES
+   ========================================================================== */
+
+/* 1. Solid Outline with Positive outline-offset */
+.input-solid-offset:focus {
+    background-color: #ffffff;
+    border-color: #2563eb;
+    outline: 3px solid #2563eb;
+    outline-offset: 3px; /* Creates spacing between border and outline */
+}
+
+/* 2. Dashed Outline */
+.input-dashed:focus {
+    background-color: #ffffff;
+    border-color: #059669;
+    outline: 3px dashed #059669;
+    outline-offset: 2px;
+}
+
+/* 3. Double Outline */
+.input-double:focus {
+    background-color: #ffffff;
+    border-color: #d97706;
+    outline: 4px double #d97706;
+    outline-offset: 2px;
+}
+
+/* 4. Textarea Accent Outline */
+.textarea-glow {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.textarea-glow:focus {
+    background-color: #ffffff;
+    border-color: #7c3aed;
+    outline: 3px solid #7c3aed;
+    outline-offset: 3px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    outline: none;
+    transition: background-color 0.2s ease, outline 0.2s ease, outline-offset 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1e293b;
+}
+
+.submit-btn:focus {
+    outline: 3px solid #0f172a;
+    outline-offset: 3px;
+}

@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* Page Header & Footer */
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #1e293b;
+  border-bottom: 2px solid #334155;
+}
+
+.header h1 {
+  color: #38bdf8;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #94a3b8;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  margin-top: 40px;
+  background-color: #1e293b;
+  border-top: 2px solid #334155;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Card Layout */
+.main-content {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  background-color: #1e293b;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  color: #38bdf8;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.card .description {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+code {
+  background-color: #0f172a;
+  color: #f43f5e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+}
+
+/* Element Selector */
+.card p {
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+/* Class Selector */
+.custom-class {
+  color: #facc15;
+  background-color: rgba(250, 204, 21, 0.1);
+  padding: 8px 12px;
+  border-left: 4px solid #facc15;
+  border-radius: 4px;
+}
+
+/* ID Selector */
+#unique-id {
+  color: #4ade80;
+  background-color: rgba(74, 222, 128, 0.1);
+  padding: 8px 12px;
+  border-left: 4px solid #4ade80;
+  border-radius: 4px;
+}
+
+/* Attribute Selector */
+a[target="_blank"] {
+  color: #fb923c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.link-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Child Combinator (>) */
+.direct-parent > p {
+  color: #a78bfa;
+  background-color: rgba(167, 139, 250, 0.1);
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+.nested-wrapper {
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px dashed #475569;
+}
+
+/* Adjacent Sibling Combinator (+) */
+.trigger-heading + p {
+  color: #38bdf8;
+  font-weight: bold;
+  background-color: rgba(56, 189, 248, 0.1);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+/* General Sibling Combinator (~) */
+.starter ~ p {
+  color: #f472b6;
+  background-color: rgba(244, 114, 182, 0.1);
+  padding: 6px 12px;
+  margin-top: 6px;
+  border-radius: 4px;
+}
+
+.starter {
+  font-weight: bold;
+  color: #94a3b8;
+}
+
+/* Descendant Combinator (space) */
+.ancestor-box li {
+  color: #2dd4bf;
+  margin-left: 20px;
+  margin-bottom: 4px;
+}

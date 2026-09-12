@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Practice Page</title>
+  <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header class="header">
+    <h1>CSS Selectors Practice Page</h1>
+    <p>A reference guide demonstrating fundamental CSS selector types and combinators.</p>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- Section 1: Basic Selectors -->
+    <section class="card">
+      <h2>1. Basic Selectors</h2>
+      <p class="description">Demonstrates Element, Class, ID, and Attribute selectors.</p>
+      
+      <p>This is a standard paragraph styled using an <strong>Element Selector</strong>.</p>
+
+      <p class="custom-class">This paragraph uses a <strong>Class Selector</strong> (.custom-class).</p>
+
+      <p id="unique-id">This paragraph uses an <strong>ID Selector</strong> (#unique-id).</p>
+
+      <div class="link-group">
+        <a href="https://example.com" target="_blank">External Link (target="_blank")</a>
+        <a href="#internal">Internal Link</a>
+      </div>
+    </section>
+
+    <!-- Section 2: Child Combinator (>) -->
+    <section class="card">
+      <h2>2. Child Combinator (<code>parent > child</code>)</h2>
+      <p class="description">Targets direct children only, ignoring deeper nested descendants.</p>
+
+      <div class="direct-parent">
+        <p>Direct child paragraph 1 (Styled)</p>
+        <p>Direct child paragraph 2 (Styled)</p>
+        <div class="nested-wrapper">
+          <p>Nested paragraph inside div (Ignored)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Adjacent Sibling Combinator (+) -->
+    <section class="card">
+      <h2>3. Adjacent Sibling Combinator (<code>A + B</code>)</h2>
+      <p class="description">Targets element B only if it directly follows element A.</p>
+
+      <h3 class="trigger-heading">Trigger Heading</h3>
+      <p>Immediately adjacent paragraph to heading (Styled).</p>
+      <p>Subsequent paragraph (Ignored).</p>
+    </section>
+
+    <!-- Section 4: General Sibling Combinator (~) -->
+    <section class="card">
+      <h2>4. General Sibling Combinator (<code>A ~ B</code>)</h2>
+      <p class="description">Targets all B elements that share the same parent and follow element A.</p>
+
+      <div class="sibling-group">
+        <p class="starter">Starter Element (.starter)</p>
+        <p>Following sibling paragraph 1 (Styled)</p>
+        <div>Unmatched div wrapper</div>
+        <p>Following sibling paragraph 2 (Styled)</p>
+      </div>
+    </section>
+
+    <!-- Section 5: Descendant Combinator (space) -->
+    <section class="card">
+      <h2>5. Descendant Combinator (<code>ancestor descendant</code>)</h2>
+      <p class="description">Targets any specified element inside the ancestor, regardless of nesting depth.</p>
+
+      <div class="ancestor-box">
+        <ul class="styled-list">
+          <li>Direct list item (Styled)</li>
+          <li>
+            Nested List Item (Styled)
+            <ul>
+              <li>Deeply nested list item (Also Styled)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Page Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 CSS Selectors Practice Page | Built with Semantic HTML & Clean CSS</p>
+  </footer>
+
+</body>
+</html>
