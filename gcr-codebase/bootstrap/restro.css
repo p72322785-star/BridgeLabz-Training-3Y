@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+}
+
+.food-img {
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+}

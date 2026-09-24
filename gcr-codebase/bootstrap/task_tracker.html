@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Tracker</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="task_tracker.css">
+</head>
+
+<body>
+
+    <main class="container py-5">
+
+        <header class="d-flex justify-content-between align-items-center mb-4">
+
+            <h1 class="fw-bold">Task Tracker</h1>
+
+            <span class="badge text-bg-danger fs-6">
+                Pending: 4
+            </span>
+
+        </header>
+
+        <!-- Bootstrap List Group -->
+        <section>
+
+            <ul class="list-group">
+
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Complete HTML assignment
+                    <span class="badge text-bg-danger">High</span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Practice Bootstrap
+                    <span class="badge text-bg-warning">Medium</span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Read CSS notes
+                    <span class="badge text-bg-success">Low</span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Submit project
+                    <span class="badge text-bg-danger">High</span>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <div class="text-center mt-4">
+
+            <button class="btn btn-success">
+                Completed
+                <span class="badge text-bg-light text-dark">2</span>
+            </button>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

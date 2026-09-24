@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+}
+
+.contact-form {
+    max-width: 600px;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+}

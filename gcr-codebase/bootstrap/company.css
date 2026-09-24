@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+
+/* Header styling */
+header {
+    background-color: #172554;
+}
+
+/* Hero section */
+.hero {
+    padding: 100px 0;
+    background-color: #eaf2ff;
+}
+
+.hero h1 {
+    color: #172554;
+}
+
+.hero p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Feature boxes */
+.feature-box {
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #172554;
+    color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
