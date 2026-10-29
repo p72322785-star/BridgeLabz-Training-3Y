@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input {
+            display: block;
+            width: 280px;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        #ticket {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Movie Ticket Booking</h2>
+
+    <form id="bookingForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <p id="nameError" class="error"></p>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <p id="emailError" class="error"></p>
+
+        <label for="seats">Number of Seats:</label>
+        <input type="number" id="seats" placeholder="Enter seats">
+        <p id="seatsError" class="error"></p>
+
+        <button type="submit">Book Tickets</button>
+    </form>
+
+    <div id="ticket"></div>
+
+    <script>
+        // Regular expressions for validation
+        const nameRegex = /^[A-Za-z]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Store booking information
+        let booking = {};
+
+        document.getElementById("bookingForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const seats = Number(document.getElementById("seats").value);
+
+                let isValid = true;
+
+                // Clear previous errors
+                document.getElementById("nameError").textContent = "";
+                document.getElementById("emailError").textContent = "";
+                document.getElementById("seatsError").textContent = "";
+                document.getElementById("ticket").style.display = "none";
+
+                // Validate name
+                if (!nameRegex.test(name)) {
+                    document.getElementById("nameError").textContent =
+                        "Name must contain alphabets only.";
+                    isValid = false;
+                }
+
+                // Validate email
+                if (!emailRegex.test(email)) {
+                    document.getElementById("emailError").textContent =
+                        "Please enter a valid email address.";
+                    isValid = false;
+                }
+
+                // Validate seats
+                if (
+                    document.getElementById("seats").value.trim() === "" ||
+                    !Number.isInteger(seats) ||
+                    seats < 1 ||
+                    seats > 10
+                ) {
+                    document.getElementById("seatsError").textContent =
+                        "Seats must be a whole number between 1 and 10.";
+                    isValid = false;
+                }
+
+                // Save and display booking if all inputs are valid
+                if (isValid) {
+                    booking = {
+                        name: name,
+                        email: email,
+                        seats: seats
+                    };
+
+                    const ticket = document.getElementById("ticket");
+
+                    ticket.innerHTML = `
+                        <h3>Booking Successful!</h3>
+                        <p><strong>Name:</strong> ${booking.name}</p>
+                        <p><strong>Email:</strong> ${booking.email}</p>
+                        <p><strong>Seats:</strong> ${booking.seats}</p>
+                    `;
+
+                    ticket.style.display = "block";
+
+                    console.log("Booking Details:", booking);
+                }
+            });
+
+        /*
+        EXPLANATION:
+
+        1. nameRegex allows alphabets only.
+        2. emailRegex checks the basic email format.
+        3. Seats must be an integer from 1 to 10.
+        4. If any input is invalid, an error message appears.
+        5. If all inputs are valid, booking details are stored
+           in an object with name, email, and seats.
+        6. The ticket details are displayed on the webpage.
+
+        EXAMPLE BOOKING OBJECT:
+
+        {
+            name: "Priya",
+            email: "priya@example.com",
+            seats: 2
+        }
+        */
+    </script>
+
+</body>
+</html>

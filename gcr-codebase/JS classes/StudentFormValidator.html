@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form Validator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input {
+            display: block;
+            width: 280px;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form id="studentForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <div id="nameError" class="error"></div>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <div id="emailError" class="error"></div>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone">
+        <div id="phoneError" class="error"></div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <div id="passwordError" class="error"></div>
+
+        <br>
+        <button type="submit">Register</button>
+        <p id="success"></p>
+    </form>
+
+    <script>
+        const form = document.getElementById("studentForm");
+
+        // Regular expressions for validation
+        const nameRegex = /^[A-Za-z]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\d{10}$/;
+        const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s])\S+$/;
+
+        function validateField(inputId, errorId, regex, message) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            const value = input.value.trim();
+
+            if (!regex.test(value)) {
+                input.classList.add("invalid");
+                input.classList.remove("valid");
+                error.textContent = message;
+                return false;
+            }
+
+            input.classList.add("valid");
+            input.classList.remove("invalid");
+            error.textContent = "";
+            return true;
+        }
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Validate every field
+            const validName = validateField(
+                "name", "nameError", nameRegex,
+                "Name must contain alphabets only."
+            );
+
+            const validEmail = validateField(
+                "email", "emailError", emailRegex,
+                "Enter a valid email, e.g. example@domain.com."
+            );
+
+            const validPhone = validateField(
+                "phone", "phoneError", phoneRegex,
+                "Phone number must contain exactly 10 digits."
+            );
+
+            const validPassword = validateField(
+                "password", "passwordError", passwordRegex,
+                "Password needs an uppercase letter, a number and a special character."
+            );
+
+            const success = document.getElementById("success");
+
+            if (validName && validEmail && validPhone && validPassword) {
+                success.textContent = "Registration successful!";
+            } else {
+                success.textContent = "";
+            }
+        });
+    </script>
+
+</body>
+</html>

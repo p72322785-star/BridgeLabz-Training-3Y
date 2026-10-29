@@ -1,0 +1,67 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Object Updater</title>
+</head>
+<body>
+    <h2>Dynamic Object Updater</h2>
+
+    <!-- Input fields for the property and its value -->
+    <label>Property Name:</label>
+    <input type="text" id="propertyName">
+    <br><br>
+
+    <label>Property Value:</label>
+    <input type="text" id="propertyValue">
+    <br><br>
+
+    <button id="updateButton">Update Object</button>
+
+    <!-- Display the updated object -->
+    <h3>Updated Object:</h3>
+    <pre id="output"></pre>
+
+    <script>
+        // Create an initial object.
+        const student = {
+            name: "Priya",
+            age: 20,
+            course: "BTech CSE"
+        };
+
+        // Display the initial object.
+        const output = document.getElementById("output");
+        output.textContent = JSON.stringify(student, null, 2);
+
+        // Get the input fields and button.
+        const propertyName = document.getElementById("propertyName");
+        const propertyValue = document.getElementById("propertyValue");
+        const updateButton = document.getElementById("updateButton");
+
+        // Update the object when the button is clicked.
+        updateButton.addEventListener("click", function () {
+            const key = propertyName.value.trim();
+            const value = propertyValue.value.trim();
+
+            // Check that both fields contain values.
+            if (key === "" || value === "") {
+                alert("Please enter both property name and value.");
+                return;
+            }
+
+            // Dynamically add or update the object property.
+            student[key] = value;
+
+            // Display the updated object in JSON format.
+            output.textContent = JSON.stringify(student, null, 2);
+
+            // Clear the input fields.
+            propertyName.value = "";
+            propertyValue.value = "";
+        });
+    </script>
+</body>
+</html>
+```

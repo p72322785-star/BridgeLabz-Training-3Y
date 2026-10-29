@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Form Builder</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input, select {
+            display: block;
+            width: 280px;
+            padding: 10px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #f2f2f2;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Custom Form Builder</h2>
+
+    <div id="formContainer"></div>
+
+    <h3>Submitted Form Data</h3>
+    <pre id="output">No data submitted yet.</pre>
+
+    <script>
+        class FormBuilder {
+            constructor(fields, containerId) {
+                this.fields = fields;
+                this.container = document.getElementById(containerId);
+            }
+
+            // Create form fields dynamically
+            buildForm() {
+                let formHTML = '<form id="dynamicForm">';
+
+                this.fields.forEach(field => {
+                    formHTML += `
+                        <label for="${field.name}">${field.label}</label>
+                        <input
+                            type="${field.type}"
+                            id="${field.name}"
+                            name="${field.name}"
+                            required
+                        >
+                    `;
+                });
+
+                formHTML += `
+                    <button type="submit">Submit</button>
+                    </form>
+                `;
+
+                this.container.innerHTML = formHTML;
+
+                document.getElementById("dynamicForm")
+                    .addEventListener("submit", (event) => {
+                        event.preventDefault();
+
+                        const formData = this.getFormData();
+
+                        document.getElementById("output").textContent =
+                            JSON.stringify(formData, null, 2);
+                    });
+            }
+
+            // Return all entered values as an object
+            getFormData() {
+                const formData = {};
+
+                this.fields.forEach(field => {
+                    const input = document.getElementById(field.name);
+                    formData[field.name] = input.value;
+                });
+
+                return formData;
+            }
+        }
+
+        // Define the fields to display
+        const fields = [
+            { type: "text", label: "Username", name: "username" },
+            { type: "email", label: "Email", name: "email" },
+            { type: "password", label: "Password", name: "password" }
+        ];
+
+        // Create the form and display it
+        const formBuilder = new FormBuilder(fields, "formContainer");
+        formBuilder.buildForm();
+
+        /*
+        EXPLANATION:
+
+        1. FormBuilder receives an array of field objects.
+        2. buildForm() creates the form using innerHTML.
+        3. forEach() loops through every field.
+        4. Each field's type, label, and name are used to create an input.
+        5. getFormData() collects the entered values into an object.
+        6. JSON.stringify() displays the submitted data in readable format.
+
+        EXAMPLE OUTPUT:
+
+        {
+          "username": "Priya",
+          "email": "priya@example.com",
+          "password": "mypassword"
+        }
+
+        NOTE:
+        innerHTML is suitable for this fixed, trusted field configuration.
+        Avoid inserting untrusted user input directly into innerHTML.
+        */
+    </script>
+
+</body>
+</html>
